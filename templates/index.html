@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Detection</title>
+</head>
+<body>
+    <h1>Face Direction</h1>
+    <img src="{{ url_for('video_feed') }}">
+
+    <h1>Hand Detection</h1>
+    <button onclick="startHandDetection()">Start Hand Detection</button>
+    <img id="handDetectionImage" style="width: 640px; height: 480px;">
+
+    <script>
+        function startHandDetection() {
+            var img = document.getElementById("handDetectionImage");
+            img.src = "/start_hand_detection";
+        }
+    </script>
+</body>
+</html>
